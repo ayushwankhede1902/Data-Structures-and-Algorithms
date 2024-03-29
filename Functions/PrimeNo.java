@@ -1,0 +1,23 @@
+import java.util.*;
+public class PrimeNo {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        boolean ans = isPrime(n);
+        System.out.println(ans);
+        
+    }
+    static boolean isPrime(int n){
+        if(n<=1){
+            return false;
+        }
+        int c = 2;
+        while( c * c <= n){
+            if( n % 2 == 0){
+                return false;
+            }
+            c++;
+        }
+        return c * c > n;
+    }
+}
